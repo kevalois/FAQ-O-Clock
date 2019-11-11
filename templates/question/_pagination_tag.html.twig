@@ -1,0 +1,10 @@
+<hr>
+<nav>
+    <ul class="pagination">
+        {% for p in 0..pagination.nbPages - 1 %}
+        <li class="page-item {% if p == pagination.start %}active{% endif %}">
+            <a class="page-link" href="{{ path('question_list_by_tag', {'name': selectedTag, 'page': p}) }}">{{ p + 1 }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
